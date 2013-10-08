@@ -8,7 +8,7 @@
 // sample CSS: html[data-useragent*='Chrome/13.0'] { ... }
 
 //Regex email
-function validateEmail(email) { 
+function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
@@ -20,40 +20,12 @@ function form_incorrect(el) {
     return false;
 }
 
-//Mostro le field per il login
-function show_loginFields() {
-    if (!$('.acc-logcontainer').hasClass('hover'))
-        $('.acc-logcontainer').addClass('hover');
-}
-
-//Nascondo le field per il login
-function hide_loginFields() {
-    if ($('.acc-logcontainer').hasClass('hover'))
-        $('.acc-logcontainer').removeClass('hover');
-}
-
-//Controllo del focus per il login
-function control_LoginFocus() {
-    var log_focused = false;
-    $('.acc-logcontainer input').each(function (v) {
-        if ($(this).is(':focus'))
-            log_focused = true;
-    });
-    if (log_focused) {
-        if (!$('.acc-logcontainer').hasClass('focused'))
-            $('.acc-logcontainer').addClass('focused');
-    } else {
-        if ($('.acc-logcontainer').hasClass('focused'))
-            $('.acc-logcontainer').removeClass('focused');
-    }    
-}
-
 // remap jQuery to $
 (function ($) {
 
 /* trigger when page is ready */
 $(document).ready(function () {
-    var email_validation = '^[\w\-\.]*[\w\.]\@[\w\.]*[\w\-\.]+[\w\-]+[\w]\.+[\w]+[\w $]';    
+    var email_validation = '^[\w\-\.]*[\w\.]\@[\w\.]*[\w\-\.]+[\w\-]+[\w]\.+[\w]+[\w $]';
 
     //Auto placeholder .IE
     $('input, textarea').placeholder();
@@ -92,7 +64,7 @@ $(document).ready(function () {
             }
         });
         if(fControl)
-            document.contact_form.submit();        
+            document.contact_form.submit();
     });
 
     //Display evidente delle field per il login
@@ -116,11 +88,11 @@ $(document).ready(function () {
 /* optional triggers
 
 $(window).load(function() {
-	
+
 });
 
 $(window).resize(function() {
-	
+
 });
 
 */

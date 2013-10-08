@@ -20,30 +20,30 @@ a:hover {color: #475061;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #475061; color: #fff; text-shadow: none;}
-::selection {background: #475061; color: #fff; text-shadow: none;} 
+::selection {background: #475061; color: #fff; text-shadow: none;}
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #475061;} 
+a:link {-webkit-tap-highlight-color: #475061;}
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
 
-/* Mozilla dosen't style place holders by default */
+/* Placeholders */
 input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
+::-webkit-input-placeholder { color: #a9a9a9; }
+:-moz-placeholder { color: #a9a9a9; }
+::-moz-placeholder { color: #a9a9a9; }
+:-ms-input-placeholder { color: #a9a9a9; }
 
-/* 
- * START - GiuB.it Styles 
+/*
+ * START - GiuB.it Styles
  * **********************/
 html { min-height: 100%; background: #fff; }
 .inner { margin: 0 auto; padding: 0 30px; width: 1040px; height: 100%; position: relative; float: none; background: #fff; }
 .clearfix { display: block; }
 .wrapper { min-height: 800px; }
 .a-transition { -webkit-transition: color 0.085s ease; -moz-transition: color 0.085s ease; -o-transition: color 0.085s ease; -ms-transition: color 0.085s ease; transition: color 0.085s ease; }
-::-webkit-input-placeholder { color: #475061; }
-:-moz-placeholder { color: #475061; }
-::-moz-placeholder { color: #475061; }
-:-ms-input-placeholder { color: #475061; }
 .content .text { text-align: justify; }
 .content .text img { margin-right: 16px; }
 .content .text a { color: #475061; text-decoration: underline; }
@@ -88,6 +88,6 @@ h3 { font-size: 16.67px; line-height: 15px; margin-bottom: 18px; }
 -------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 480px) {
-	
-		
+
+
 }
