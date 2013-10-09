@@ -45,11 +45,9 @@ $(document).ready(function () {
 
     //Controllo Generale Form
     $('.simple_form_control .control-btn').on('click', function () {
-        var fControl = true, fName = $(this).parent('form').attr('name');
-
-        console.log();
+        var fControl = true, fName = $(this).parent('form').attr('name'), form = $(this).parent('form');
         //Controllo se tutti i campi required sono stati settati e diversi dalla precompilazione fblank per .IE
-        $.each($('.simple_form_control input, .simple_form_control textarea'), function (k, v) {
+        form.children('input, textarea').each(function (k, v) {
             if (    //Validazione standard fields
                     ($(v).attr('required') == 'required' && $(v).val().length == 0) ||
                     //Validazione email
@@ -66,7 +64,7 @@ $(document).ready(function () {
             }
         });
         if(fControl && fName != null)
-            document.fName.submit();
+            document.forms[fName].submit();            
     });
 
     //Apertura dei dettagli parent - child
