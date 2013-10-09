@@ -45,7 +45,9 @@ $(document).ready(function () {
 
     //Controllo Generale Form
     $('.simple_form_control .control-btn').on('click', function () {
-        var fControl = true;
+        var fControl = true, fName = $(this).parent('form').attr('name');
+
+        console.log();
         //Controllo se tutti i campi required sono stati settati e diversi dalla precompilazione fblank per .IE
         $.each($('.simple_form_control input, .simple_form_control textarea'), function (k, v) {
             if (    //Validazione standard fields
@@ -63,13 +65,9 @@ $(document).ready(function () {
                 return false;
             }
         });
-        if(fControl)
-            document.contact_form.submit();
+        if(fControl && fName != null)
+            document.fName.submit();
     });
-
-    //Display evidente delle field per il login
-    $('.acc-logcontainer').hover(show_loginFields, hide_loginFields);
-    $('.acc-logcontainer input').focus(control_LoginFocus).focusout(control_LoginFocus);
 
     //Apertura dei dettagli parent - child
     $('.arrow-container').on('click', function () {
